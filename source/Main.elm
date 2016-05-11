@@ -6,9 +6,7 @@ import Html.Events exposing (..)
 import Html.Lazy exposing (lazy)
 import Signal exposing (Signal, Address, send)
 
-type Action
-  = NoOp
-
+type Action = NoOp
 
 type alias AppState = 
   { events: List Int
