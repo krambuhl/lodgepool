@@ -1,0 +1,11 @@
+$fontstack-sans: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$fontstack-mono: monospace;
+
+$fontstacks: (
+  sans: $fontstack-sans,
+  mono: $fontstack-mono
+);
+
+@function fontstack($name) {
+  @return map-get($fontstacks, $name);
+}

@@ -1,0 +1,11 @@
+$weights: (
+  default: 300,
+  light:  300,
+  normal: 400,
+  bold: 500,
+  heavy: 600
+);
+
+@function weight($name) {
+  @return map-get($weights, $name);  
+}

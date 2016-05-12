@@ -1,0 +1,10 @@
+$durations: (
+  fast: 0.15s,
+  default: 0.3s,
+  medium: 0.7s,
+  slow: 1s
+);
+
+@function duration($name) {
+  @return #{map-get($durations, $name)};  
+}
