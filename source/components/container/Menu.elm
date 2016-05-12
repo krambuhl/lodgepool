@@ -10,9 +10,12 @@ import Components.Display.Button as Button
 
 view : List (Attribute msg) -> List (Html msg) -> Html msg
 view attrs children =
-  nav
-    (mergeAttributes 
-      [ classList [ ("menu", True) ]
-      , attribute "aria-role" "nav" ]
-      attrs)
-    [ Button.view [ ] children ]
+  let defAttrs =
+    [ classList [ ("menu", True) ]
+    , attribute "aria-role" "nav" ]
+
+  in 
+    nav 
+      (mergeAttributes defAttrs attrs) 
+      [ Button.view [] children
+      , Button.view [] children ]
