@@ -7,15 +7,13 @@ import Maybe exposing (Maybe(Just, Nothing), withDefault)
 
 import Components.Utils exposing (Options, mergeAttributes)
 
-view : Options msg -> Html msg
-view opts = 
+view : List (Attribute msg) -> List (Html msg) -> Html msg
+view attrs children = 
   let 
     attributes =
       mergeAttributes 
         [ classList [ ("button", True) ]
         , attribute "aria-role" "button" ]
-        (withDefault [] opts.attributes)
-    children = 
-      withDefault [] opts.children
+        attrs
   in 
     a attributes children
