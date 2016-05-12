@@ -1,4 +1,4 @@
-module Components.Display.Button exposing (view) -- -- where
+module Components.Display.Icon exposing (view) -- -- where
 
 import Html exposing (Html, Attribute, a, text)
 import Html.Attributes exposing (attribute, class, classList,href)
@@ -7,12 +7,10 @@ import Maybe exposing (Maybe(Just, Nothing), withDefault)
 
 import Components.Utils exposing (Options, mergeAttributes)
 
-view : List (Attribute msg) -> List (Html msg) -> Html msg
-view attrs children = 
+view : List (Attribute msg) -> Html msg
+view attrs = 
   let defAttrs = 
-    [ classList [ ("button", True) ]
-    , attribute "aria-role" "button"
-    , href "#" ]
+    [ classList [ ("icon", True) ] ]
 
   in 
-    a (mergeAttributes defAttrs attrs) children
+    i (mergeAttributes defAttrs attrs) []
