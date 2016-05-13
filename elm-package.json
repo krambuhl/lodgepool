@@ -4,7 +4,7 @@
     "repository": "https://github.com/krambuhl/elm-adventures.git",
     "license": "BSD3",
     "source-directories": [
-        "source"
+        "dist"
     ],
     "exposed-modules": [],
     "dependencies": {
